@@ -19,13 +19,6 @@ var main = function() {
           }
         );
 
-        /* Deleting Item from List*/
-        $('#filterList').on('click','.remove',
-          function() {
-            $(this).closest(".item").remove();
-          }
-        );
-
         /*Selected CSS*/
         $('#filterList').on('mouseenter', '.item',
           function( event ) {
@@ -52,6 +45,7 @@ var main = function() {
             $("iframe").attr('src', currentUrl);
           }
         );
+
 
 }
 

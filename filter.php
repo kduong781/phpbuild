@@ -18,13 +18,8 @@ if($username != "admin" && $password != "admin" && $session != "true") { //if us
     $loggedIn = "true";
 
     /* Database Info*/
-    define("DB_HOST", "test.cmxsmmcmpe9w.us-east-1.rds.amazonaws.com");
-    define("DB_USER", "admin");
-    define("DB_PASS", "mypassword");
-    define("DB_PORT", "3306");
-    define("DB_NAME", "test");
-
-    include "data.php";
+    include "include/databaseInfo.php";
+    include "data.class.php";
 
     $database = new Database();
 
@@ -35,6 +30,8 @@ if($username != "admin" && $password != "admin" && $session != "true") { //if us
 <!doctype html>
 <html>
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Filter Page</title>
   <!-- Bootstrap Core CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <!-- Font Awesome -->
@@ -62,9 +59,12 @@ if($username != "admin" && $password != "admin" && $session != "true") { //if us
       foreach($urlList as $url) { ?>
 
         <div class="item">
-          <span class="itemDesc"><?php echo $url['url']?></span>
-          <button type="button" class="btn-xs btn-danger right remove">Remove</button>
-        </div>
+          <form action="delete.php" method="post">
+            <span class="itemDesc"><?php echo $url['url']?></span>
+            <input type="hidden" name="id" value="<?php echo $url['idUrl']?>">
+            <button type="submit" class="btn-xs btn-danger right remove">Remove</button>
+          </form>
+          </div>
         <?php      }      ?>
 
     </div>
@@ -85,7 +85,7 @@ if($username != "admin" && $password != "admin" && $session != "true") { //if us
       <form action="insert.php" action="post">
         <div class="modal-body">
           <div class="form-group">
-              <label for="filterDesc">URL</label>
+              <label for="filterDesc">URL (Seperate with comma for multiple URL)</label>
               <input type="text" class="form-control" id="filterDesc" name="myurl" placeholder="Enter a URL">
           </div>
 
