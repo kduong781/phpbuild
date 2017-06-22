@@ -109,7 +109,7 @@ if($username != "admin" && $password != "admin" && $session != "true") { //if us
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Add a Filter</h4>
+          <h4 class="modal-title">IFRAME</h4>
         </div>
         <iframe src="">
           Your browser does not support iframes.
