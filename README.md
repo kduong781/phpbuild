@@ -20,6 +20,8 @@ To add a url, click on the add button and enter the full url in the input box.
 ### Adding Multiple URL ###
 
 To add multiple url, click on the add button and enter the urls in the input box seperated with a comma.
+
+
 (i.e http://www.google.com,http://www.bing.com)
 
 ![alt text](screenshots/multipleurl.png "Screenshot")
