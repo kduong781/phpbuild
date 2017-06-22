@@ -37,7 +37,7 @@ var main = function() {
 
 
 
-        /* */
+        /*Block Checker */
         $('#openUrl').click(
           function() {
             var urlArray = $(".itemDesc");

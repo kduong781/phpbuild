@@ -58,7 +58,7 @@ if($username != "admin" && $password != "admin" && $session != "true") { //if us
         <button id="edit" type="button" class="btn btn-warning right">Edit</button>
     </div>
     <div id="filterList" class="filterList">
-      <?php
+      <?php /*Retrieves URLs from Database*/
       foreach($urlList as $url) { ?>
 
         <div class="item">
@@ -82,18 +82,19 @@ if($username != "admin" && $password != "admin" && $session != "true") { //if us
         <button type="button" class="close" data-dismiss="modal">&times;</button>
         <h4 class="modal-title">Add a Filter</h4>
       </div>
-      <div class="modal-body">
-                  <form>
-                  <div class="form-group">
-                        <label for="filterDesc">URL</label>
-                        <input class="form-control" id="filterDesc" placeholder="Enter a URL">
-                 </div>
-        </form>
-      </div>
-      <div class="modal-footer">
-         <button id="add" type="button" class="btn btn-success" >Add</button>
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-      </div>
+      <form action="insert.php" action="post">
+        <div class="modal-body">
+          <div class="form-group">
+              <label for="filterDesc">URL</label>
+              <input type="text" class="form-control" id="filterDesc" name="myurl" placeholder="Enter a URL">
+          </div>
+
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-success" >Add</button>
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </form>
     </div>
 
   </div>
