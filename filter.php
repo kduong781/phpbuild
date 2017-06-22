@@ -23,6 +23,7 @@ if($username != "admin" && $password != "admin" && $session != "true") { //if us
 
     $database = new Database();
 
+    /*Query to get retrive URL list from database*/
     $database->query('SELECT * FROM Url');
     $urlList = $database->resultset();
 
@@ -55,7 +56,7 @@ if($username != "admin" && $password != "admin" && $session != "true") { //if us
         <button id="edit" type="button" class="btn btn-warning right">Edit</button>
     </div>
     <div id="filterList" class="filterList">
-      <?php /*Retrieves URLs from Database*/
+      <?php /*Outputs Urls from result set*/
       foreach($urlList as $url) { ?>
 
         <div class="item">
@@ -100,7 +101,7 @@ if($username != "admin" && $password != "admin" && $session != "true") { //if us
   </div>
 </div>
 
-
+<!-- Modal for opening URL -->
   <div id="urlFrame" class="modal fade" role="dialog">
     <div class="modal-dialog">
 
@@ -122,6 +123,7 @@ if($username != "admin" && $password != "admin" && $session != "true") { //if us
 
 
 <?php  include 'include/footer.php'; }?>
+
   <!-- jQuery -->
   <script src="http://code.jquery.com/jquery-3.1.1.min.js"></script>
   <!-- Bootstrap Core JavaScript -->

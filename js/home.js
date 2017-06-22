@@ -1,18 +1,5 @@
 var main = function() {
-        $('#add').click(
-          function(){
-            if($('.remove').is(":visible")) {
-                $('.remove').toggle();
-            }
-          //  var filterName = $("#filterName").val();
-            var filterDesc = $("#filterDesc").val();
-            $("#filterList").append("<div class='item'><span class='itemDesc'>"+filterDesc+"</span><button type='button' class='btn-xs btn-danger right remove'>Remove</button></div>");
-            $("#filterForm").modal("hide");
-            $("#filterName").val("");
-            $("#filterDesc").val("");
-          }
-        );
-
+      /*Remove toggle*/
         $('#edit').click(
           function(){
               $('.remove').toggle();

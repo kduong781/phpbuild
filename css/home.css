@@ -1,3 +1,9 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,,800,900);
+
+* {
+    font-family: 'Raleway', sans-serif;
+}
+
 .navbar-brand {
   background: url("../img/logo.png");
   background-size: contain;

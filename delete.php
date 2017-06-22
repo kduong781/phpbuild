@@ -12,7 +12,7 @@ if($_SESSION['username'] || isset($_COOKIE["logged"])) {
   $database->execute();
   header('Location: filter.php');
 } else {
-  //header('Location: filter.php');
+  header('Location: filter.php');
 }
 
 ?>
