@@ -22,7 +22,7 @@ var main = function() {
           function() {
             var urlArray = $(".itemDesc");
             var currentUrl = $("#currentUrl").val();
-            var blocked = "http://www.kevinduong.me/phpbuild/blocked.php";
+            var blocked = "https://www.kevinduong.me/phpbuild/blocked.php";
             for(var i = 0; i < urlArray.length; i++) {
               if(urlArray.get(i).innerHTML == currentUrl) {
                 currentUrl = blocked;
